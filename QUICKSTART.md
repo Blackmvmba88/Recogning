@@ -1,5 +1,7 @@
 # Guía de Inicio Rápido - Recogning
 
+**[Español](#español) | [English](QUICKSTART_EN.md)**
+
 Esta guía te ayudará a poner en marcha el sistema de reconocimiento de objetos en 5 minutos.
 
 ## 📋 Pre-requisitos
@@ -21,7 +23,22 @@ pip install -r requirements.txt
 
 ## 🎯 Tutorial Básico
 
-### Paso 1: Iniciar el Sistema
+### Opción 1: Versión Simple (Recomendada)
+
+```bash
+python reconocimiento_simple.py
+```
+
+**Sigue el menú:**
+1. Selecciona opción **1** para enseñar un objeto nuevo
+2. Ingresa el nombre del objeto (ej: "taza")
+3. Posiciona el objeto frente a la cámara
+4. Se capturarán 30 muestras automáticamente
+5. Repite para 2-3 objetos diferentes
+6. Selecciona opción **2** para entrenar el modelo
+7. Selecciona opción **3** para ver reconocimiento en tiempo real!
+
+### Opción 2: Versión Avanzada
 
 ```bash
 python object_recognition.py
@@ -59,6 +76,16 @@ Repite para 2-3 objetos diferentes (ej: "libro", "celular")
 
 ## 🔧 Comandos Rápidos
 
+### Menú Versión Simple
+| Opción | Acción |
+|--------|--------|
+| `1` | Enseñar Nuevo Objeto |
+| `2` | Entrenar Modelo |
+| `3` | Reconocer en Tiempo Real |
+| `4` | Ver Objetos Aprendidos |
+| `5` | Salir |
+
+### Teclas Versión Avanzada
 | Tecla | Acción |
 |-------|--------|
 | `c` | Modo Captura |
@@ -70,6 +97,21 @@ Repite para 2-3 objetos diferentes (ej: "libro", "celular")
 
 ## 📊 Ejemplo Completo
 
+### Usando Versión Simple:
+```bash
+# 1. Iniciar
+python reconocimiento_simple.py
+
+# 2. En el programa:
+# - Selecciona 1, ingresa "taza", espera 30 capturas
+# - Selecciona 1, ingresa "libro", espera 30 capturas
+# - Selecciona 1, ingresa "celular", espera 30 capturas
+# - Selecciona 2 para entrenar
+# - Selecciona 3 para ver reconocimiento en tiempo real
+# - Selecciona 5 para salir
+```
+
+### Usando Versión Avanzada:
 ```bash
 # 1. Iniciar
 python object_recognition.py
