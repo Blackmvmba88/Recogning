@@ -1,6 +1,10 @@
 # Dataset y modelo entrenado
 dataset/
+dataset_mamba/
+dataset_demo/
 model.pkl
+modelo_demo.pkl
+ejemplo_modelo_demo.py
 
 # Python
 __pycache__/

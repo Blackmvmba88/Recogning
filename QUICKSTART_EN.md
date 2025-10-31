@@ -21,6 +21,20 @@ pip install -r requirements.txt
 
 ## 🎯 Basic Tutorial
 
+### Option 0: Instant Test! (Demo Model)
+
+Want to try the system **without capturing images**?
+
+```bash
+# Create demo model (only once)
+python crear_modelo_demo.py
+
+# Use the demo model
+python ejemplo_modelo_demo.py
+```
+
+Ready! The system already recognizes 5 basic objects (circle, square, triangle, star, line).
+
 ### Option 1: Simple Version (Recommended)
 
 ```bash

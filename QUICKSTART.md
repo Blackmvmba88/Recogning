@@ -23,6 +23,20 @@ pip install -r requirements.txt
 
 ## 🎯 Tutorial Básico
 
+### Opción 0: ¡Prueba Instantánea! (Modelo Demo)
+
+¿Quieres probar el sistema **sin capturar imágenes**?
+
+```bash
+# Crear modelo de demostración (solo una vez)
+python crear_modelo_demo.py
+
+# Usar el modelo demo
+python ejemplo_modelo_demo.py
+```
+
+¡Listo! El sistema ya reconoce 5 objetos básicos (círculo, cuadrado, triángulo, estrella, línea).
+
 ### Opción 1: Versión Simple (Recomendada)
 
 ```bash

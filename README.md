@@ -24,6 +24,25 @@ Sistema básico de reconocimiento de objetos en Python que permite capturar, ent
    - API programática completa
    - Controles de teclado interactivos
 
+### 🎁 Modelo de Demostración (¡No empezar desde cero!)
+
+¿Quieres probar el sistema sin capturar tus propias imágenes? **Usa el modelo pre-entrenado:**
+
+```bash
+# Crear modelo de demostración con objetos básicos
+python crear_modelo_demo.py
+
+# Usar el modelo demo
+python ejemplo_modelo_demo.py
+```
+
+El script `crear_modelo_demo.py` genera:
+- 📁 **dataset_demo/** - 5 objetos sintéticos (círculo, cuadrado, triángulo, estrella, línea)
+- 🤖 **modelo_demo.pkl** - Modelo KNN pre-entrenado con 125 muestras
+- 📄 **ejemplo_modelo_demo.py** - Script listo para ejecutar
+
+¡Perfecto para aprender y probar el sistema inmediatamente!
+
 ### Características Principales
 
 - ✅ **Captura de imágenes** desde webcam en tiempo real
@@ -257,6 +276,25 @@ Basic object recognition system in Python that allows capturing, training, and c
    - For advanced users
    - Complete programmatic API
    - Interactive keyboard controls
+
+### 🎁 Demo Model (Don't start from scratch!)
+
+Want to try the system without capturing your own images? **Use the pre-trained model:**
+
+```bash
+# Create demo model with basic objects
+python crear_modelo_demo.py
+
+# Use the demo model
+python ejemplo_modelo_demo.py
+```
+
+The `crear_modelo_demo.py` script generates:
+- 📁 **dataset_demo/** - 5 synthetic objects (circle, square, triangle, star, line)
+- 🤖 **modelo_demo.pkl** - Pre-trained KNN model with 125 samples
+- 📄 **ejemplo_modelo_demo.py** - Ready-to-run script
+
+Perfect for learning and testing the system immediately!
 
 ### Main Features
 
