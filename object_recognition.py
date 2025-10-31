@@ -8,7 +8,7 @@ import cv2
 import numpy as np
 import os
 from sklearn.neighbors import KNeighborsClassifier
-import pickle
+import joblib
 
 
 class ObjectRecognitionSystem:
@@ -161,8 +161,7 @@ class ObjectRecognitionSystem:
             'knn': self.knn,
             'class_names': self.class_names
         }
-        with open(self.model_path, 'wb') as f:
-            pickle.dump(model_data, f)
+        joblib.dump(model_data, self.model_path)
         print(f"Modelo guardado en {self.model_path}")
         
     def load_model(self):
@@ -171,13 +170,15 @@ class ObjectRecognitionSystem:
             print("No se encontró el modelo guardado")
             return False
         
-        with open(self.model_path, 'rb') as f:
-            model_data = pickle.load(f)
+        try:
+            model_data = joblib.load(self.model_path)
             self.knn = model_data['knn']
             self.class_names = model_data['class_names']
-        
-        print(f"Modelo cargado: {len(self.class_names)} clases")
-        return True
+            print(f"Modelo cargado: {len(self.class_names)} clases")
+            return True
+        except Exception as e:
+            print(f"Error al cargar el modelo: {e}")
+            return False
         
     def predict(self, frame):
         """

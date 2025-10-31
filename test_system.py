@@ -179,19 +179,19 @@ def test_edge_cases():
     # Intentar cargar dataset inexistente
     print("Probando carga de dataset inexistente...")
     result = system.load_dataset()
-    assert result == False, "Debería retornar False para dataset inexistente"
+    assert result is False, "Debería retornar False para dataset inexistente"
     print("  ✓ Manejo correcto de dataset inexistente")
     
     # Intentar cargar modelo inexistente
     print("\nProbando carga de modelo inexistente...")
     result = system.load_model()
-    assert result == False, "Debería retornar False para modelo inexistente"
+    assert result is False, "Debería retornar False para modelo inexistente"
     print("  ✓ Manejo correcto de modelo inexistente")
     
     # Intentar entrenar sin datos
     print("\nProbando entrenamiento sin datos...")
     result = system.train_model()
-    assert result == False, "Debería retornar False sin datos de entrenamiento"
+    assert result is False, "Debería retornar False sin datos de entrenamiento"
     print("  ✓ Manejo correcto de entrenamiento sin datos")
     
     # Intentar predicción sin modelo
