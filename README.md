@@ -139,14 +139,14 @@ rec.start_perception()
 
 ### 🌱 PHASE 0 — Estructura y Fundación ✅
 **Objetivo:** Sentar cimientos profesionales  
-**Status:** En progreso  
+**Status:** Completado  
 **Entregables:**
 - [x] README visual y explicativo
 - [x] Logo minimal (🧠📷)
 - [x] Licencia MIT
 - [x] CONTRIBUTING.md
 - [x] Issue templates
-- [ ] Wiki inicial
+- [x] Estructura del proyecto
 
 ### 🔭 PHASE 1 — Percepción Real en Vivo
 **Objetivo:** Que el sistema vea algo real  
