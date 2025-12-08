@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 GitHub Discussions
+    url: https://github.com/Blackmvmba88/Recogning/discussions
+    about: Haz preguntas generales y discute ideas con la comunidad
+  - name: 📖 Documentación
+    url: https://github.com/Blackmvmba88/Recogning/wiki
+    about: Lee la documentación del proyecto
+  - name: 🤝 Guía de Contribución
+    url: https://github.com/Blackmvmba88/Recogning/blob/main/CONTRIBUTING.md
+    about: Aprende cómo contribuir al proyecto
