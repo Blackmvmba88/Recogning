@@ -1,3 +1,11 @@
+# Dataset y modelo entrenado
+dataset/
+dataset_mamba/
+dataset_demo/
+model.pkl
+modelo_demo.pkl
+ejemplo_modelo_demo.py
+
 # Python
 __pycache__/
 *.py[cod]
@@ -16,105 +24,22 @@ parts/
 sdist/
 var/
 wheels/
-pip-wheel-metadata/
-share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-MANIFEST
 
-# Virtual Environments
+# Virtual Environment
 venv/
-env/
 ENV/
-env.bak/
-venv.bak/
-.venv/
+env/
 
-# PyCharm
-.idea/
-
-# VS Code
+# IDE
 .vscode/
-*.code-workspace
-
-# Jupyter Notebook
-.ipynb_checkpoints
-*.ipynb
-
-# Testing
-.pytest_cache/
-.coverage
-.coverage.*
-htmlcov/
-.tox/
-.nox/
-coverage.xml
-*.cover
-.hypothesis/
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
-
-# MacOS
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Thumbnails
-._*
-
-# Linux
+.idea/
+*.swp
+*.swo
 *~
 
-# Windows
+# OS
+.DS_Store
 Thumbs.db
-ehthumbs.db
-Desktop.ini
-$RECYCLE.BIN/
-*.cab
-*.msi
-*.msix
-*.msm
-*.msp
-*.lnk
-
-# Logs
-*.log
-logs/
-
-# Database
-*.db
-*.sqlite
-*.sqlite3
-
-# Temporary files
-tmp/
-temp/
-*.tmp
-
-# Model files (large files, should use Git LFS)
-*.pt
-*.pth
-*.onnx
-*.h5
-*.pb
-*.tflite
-*.weights
-
-# Data directories
-data/
-datasets/
-videos/
-recordings/
-captures/
-
-# Recogning specific
-memory_db/
-detections/
-embeddings/

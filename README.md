@@ -1,288 +1,505 @@
+# Recogning 🎯
+
+**[Español](#español) | [English](#english)**
+
+---
+
+## Español
+
+**Inteligencia visual en vivo.** Un sistema que aprende a reconocer el mundo desde la cámara, etiquetando y recordando objetos como un aprendiz cuántico digital.
+
+## 📋 Descripción
+
+Sistema básico de reconocimiento de objetos en Python que permite capturar, entrenar y clasificar imágenes desde la webcam usando el algoritmo **K-Nearest Neighbors (KNN)**. El objetivo es enseñar al modelo nuevos objetos manualmente y obtener reconocimiento en tiempo real.
+
+### 🎯 Dos Versiones Disponibles
+
+1. **`reconocimiento_simple.py`** - Versión simplificada con menú interactivo
+   - Ideal para principiantes
+   - Interfaz de menú fácil de usar
+   - Flujo guiado paso a paso
+
+2. **`object_recognition.py`** - Versión avanzada con clase completa
+   - Para usuarios avanzados
+   - API programática completa
+   - Controles de teclado interactivos
+
+### 🎁 Modelo de Demostración (¡No empezar desde cero!)
+
+¿Quieres probar el sistema sin capturar tus propias imágenes? **Usa el modelo pre-entrenado:**
+
+```bash
+# Crear modelo de demostración con objetos básicos
+python crear_modelo_demo.py
+
+# Usar el modelo demo
+python ejemplo_modelo_demo.py
 ```
-  ╔═══════════════════════════════════════════════════════════╗
-  ║                                                           ║
-  ║         🧠📷  R E C O G N I N G  📷🧠                    ║
-  ║                                                           ║
-  ║    El Aprendiz Cuántico Visual del Mundo Físico         ║
-  ║                                                           ║
-  ╚═══════════════════════════════════════════════════════════╝
-```
 
-<div align="center">
+El script `crear_modelo_demo.py` genera:
+- 📁 **dataset_demo/** - 5 objetos sintéticos (círculo, cuadrado, triángulo, estrella, línea)
+- 🤖 **modelo_demo.pkl** - Modelo KNN pre-entrenado con 125 muestras
+- 📄 **ejemplo_modelo_demo.py** - Script listo para ejecutar
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-0.0.1-blue.svg)](https://github.com/Blackmvmba88/Recogning/releases)
-[![Status](https://img.shields.io/badge/status-foundation-orange.svg)](https://github.com/Blackmvmba88/Recogning)
+¡Perfecto para aprender y probar el sistema inmediatamente!
 
-**Un sistema que ve, recuerda y aprende del mundo real**
+### Características Principales
 
-[Características](#-características) •
-[Instalación](#-instalación) •
-[Uso Rápido](#-uso-rápido) •
-[Roadmap](#-roadmap) •
-[Contribuir](#-contribuir)
+- ✅ **Captura de imágenes** desde webcam en tiempo real
+- ✅ **Entrenamiento manual** de nuevas clases de objetos
+- ✅ **Clasificación en tiempo real** usando KNN
+- ✅ **Dataset local** con almacenamiento organizado por clases
+- ✅ **Persistencia del modelo** entrenado
+- ✅ **Interfaz interactiva** con controles de teclado
+- ✅ **Preprocesamiento automático** de imágenes
 
-</div>
+## 🛠️ Tecnologías
 
----
-
-## 🌟 ¿Qué es Recogning?
-
-**Recogning** es un sistema de inteligencia visual en vivo que transforma cámaras en aprendices cuánticos digitales. No solo detecta objetos: **los recuerda, aprende de ellos y razona sobre el mundo físico**.
-
-Imagina un ser digital que:
-- 👁️ **Ve** el mundo en tiempo real (webcam, ESP32-CAM, celular)
-- 🧠 **Recuerda** cada objeto detectado con memoria persistente
-- 🎯 **Aprende** nuevos objetos contigo, como un niño
-- 🗺️ **Mapea** el espacio y entiende ubicaciones
-- 💭 **Razona** sobre lo que ve usando lenguaje natural
-- 🤖 **Actúa** en robótica, domótica e industria
-
-### 🎯 Filosofía
-
-> "No es solo visión por computadora. Es **experiencia sensorial del entorno** + **memoria episódica** + **aprendizaje activo** + **razonamiento lingüístico**."
-
-Recogning es el puente entre:
-- La percepción de máquinas
-- La cognición humana
-- El mundo físico
-
----
-
-## ✨ Características
-
-### 🔥 Fase Actual: **PHASE 0 — Fundación**
-- ✅ Estructura profesional del proyecto
-- ✅ Documentación clara y colaborativa
-- ✅ Estándares de contribución
-- ✅ Sistema de issues y templates
-
-### 🚀 Próximamente:
-
-#### PHASE 1 — Percepción en Vivo
-- Captura desde webcam / ESP32-CAM / celular
-- YOLOv8 / MobileNet integrado
-- Detección en tiempo real con bounding boxes
-- Demo ejecutable: `python recogning.py`
-
-#### PHASE 2 — Memoria Visual
-- Base de datos de objetos detectados
-- Embeddings vectoriales (CLIP/OpenCLIP)
-- Fotos recortadas + metadata
-- Visualizador de memoria
-
-#### PHASE 3+ — [Ver Roadmap Completo](#-roadmap)
-
----
+- **OpenCV**: Captura y procesamiento de video/imágenes
+- **NumPy**: Operaciones numéricas y manipulación de arrays
+- **scikit-learn**: Implementación del clasificador KNN
+- **Python 3.x**: Lenguaje base del proyecto
 
 ## 📦 Instalación
 
-> **Nota:** El sistema está en fase de fundación. La instalación completa estará disponible en v0.1.
-
 ### Requisitos Previos
-- Python 3.8+
-- pip
-- (Opcional) Cámara web / ESP32-CAM
 
-### Instalación Rápida (próximamente)
+- Python 3.7 o superior
+- Webcam funcional
+- pip (gestor de paquetes de Python)
 
+### Pasos de Instalación
+
+1. **Clonar el repositorio:**
 ```bash
-# Clonar el repositorio
 git clone https://github.com/Blackmvmba88/Recogning.git
 cd Recogning
-
-# Instalar dependencias
-pip install -r requirements.txt
-
-# Ejecutar demo
-python recogning.py
 ```
 
----
+2. **Instalar dependencias:**
+```bash
+pip install -r requirements.txt
+```
 
-## 🎮 Uso Rápido
+## 🚀 Uso
 
-### Demo Básico (v0.1 - próximamente)
+### Opción 1: Versión Simple (Recomendado para principiantes)
 
 ```bash
-# Iniciar detección en vivo
-python recogning.py
-
-# Ver memoria de objetos
-python recogning.py memory view
-
-# Buscar en memoria
-recogning search "vaso"
-
-# Etiquetar objeto personalizado
-recogning add-label "esto es mi laptop"
+python reconocimiento_simple.py
 ```
 
-### Ejemplo de Código
+**Menú interactivo:**
+1. Enseñar nuevo objeto (captura 30 ejemplos automáticamente)
+2. Entrenar modelo
+3. Reconocer en tiempo real
+4. Ver objetos aprendidos
+5. Salir
+
+### Opción 2: Versión Avanzada
+
+```bash
+python object_recognition.py
+```
+
+**Controles del Teclado:**
+
+| Tecla | Función |
+|-------|---------|
+| `c` | Activar **modo captura** - capturar muestras para entrenamiento |
+| `ESPACIO` | **Capturar muestra** de la clase actual (en modo captura) |
+| `t` | **Entrenar modelo** con las muestras capturadas |
+| `p` | Activar **modo predicción** - reconocer objetos en tiempo real |
+| `l` | **Cargar modelo** previamente guardado |
+| `q` | **Salir** del programa |
+
+### Flujo de Trabajo Típico
+
+#### 1. Capturar Muestras de Entrenamiento
+
+```
+1. Ejecutar: python object_recognition.py
+2. Presionar 'c' para modo captura
+3. Ingresar nombre de la clase (ej: "taza", "libro", "celular")
+4. Posicionar el objeto frente a la cámara
+5. Presionar ESPACIO para capturar múltiples muestras (10-20 recomendado)
+6. Repetir pasos 2-5 para cada clase de objeto que desee reconocer
+```
+
+#### 2. Entrenar el Modelo
+
+```
+7. Presionar 't' para entrenar el modelo con todas las muestras capturadas
+8. Esperar a que el entrenamiento complete
+```
+
+#### 3. Reconocimiento en Tiempo Real
+
+```
+9. Presionar 'p' para activar modo predicción
+10. Mostrar objetos frente a la cámara
+11. Observar las predicciones en pantalla con porcentaje de confianza
+```
+
+## 📁 Estructura del Proyecto
+
+```
+Recogning/
+├── object_recognition.py    # Módulo principal del sistema
+├── requirements.txt         # Dependencias del proyecto
+├── README.md               # Documentación
+├── dataset/                # Directorio de imágenes (se crea automáticamente)
+│   ├── clase1/            # Carpeta por clase
+│   │   ├── clase1_1.jpg
+│   │   ├── clase1_2.jpg
+│   │   └── ...
+│   ├── clase2/
+│   └── ...
+└── model.pkl              # Modelo KNN entrenado (se crea al entrenar)
+```
+
+## 🔬 Cómo Funciona
+
+### 1. Captura y Preprocesamiento
+
+- Las imágenes se capturan desde la webcam
+- Se redimensionan a 64x64 píxeles
+- Se convierten a escala de grises
+- Se normalizan (valores 0-1)
+- Se aplanan en un vector unidimensional
+
+### 2. Almacenamiento
+
+- Cada clase se guarda en su propio subdirectorio dentro de `dataset/`
+- Las imágenes se guardan en formato JPG
+- Se mantiene un conteo automático de muestras
+
+### 3. Entrenamiento
+
+- El sistema carga todas las imágenes del dataset
+- Preprocesa cada imagen siguiendo el mismo pipeline
+- Entrena un clasificador KNN (K-Nearest Neighbors)
+- Guarda el modelo entrenado en `model.pkl`
+
+### 4. Predicción
+
+- Captura frames en tiempo real
+- Preprocesa cada frame
+- Clasifica usando el modelo KNN
+- Calcula confianza basada en distancias de vecinos
+- Muestra resultado en pantalla
+
+## 💡 Casos de Uso
+
+- 🎓 **Educación**: Base para aprender IA visual y machine learning
+- 🤖 **Asistentes inteligentes**: Reconocimiento de objetos cotidianos
+- 🔍 **Clasificación personalizada**: Entrenar categorías específicas
+- 🧪 **Prototipado rápido**: Validar ideas de visión por computadora
+- 📚 **Proyectos académicos**: Implementación práctica de KNN
+
+## ⚙️ Configuración Avanzada
+
+El sistema puede personalizarse editando la clase `ObjectRecognitionSystem`:
 
 ```python
-from recogning import Recogning
+# Cambiar tamaño de imagen para procesamiento
+self.img_size = (64, 64)  # Aumentar para más detalle
 
-# Inicializar sistema
-rec = Recogning()
-
-# Iniciar percepción en vivo
-rec.start_perception()
-
-# El sistema ve, detecta y recuerda automáticamente
-# Presiona 'q' para salir
+# Modificar número de vecinos en KNN
+n_neighbors = 5  # En método train_model()
 ```
 
----
+## 🐛 Solución de Problemas
 
-## 🗺️ Roadmap
+### La webcam no se inicia
+- Verificar que la webcam esté conectada y funcional
+- Verificar permisos de acceso a la cámara
+- Probar con otra aplicación de cámara
 
-### 🌱 PHASE 0 — Estructura y Fundación ✅
-**Objetivo:** Sentar cimientos profesionales  
-**Status:** Completado  
-**Entregables:**
-- [x] README visual y explicativo
-- [x] Logo minimal (🧠📷)
-- [x] Licencia MIT
-- [x] CONTRIBUTING.md
-- [x] Issue templates
-- [x] Estructura del proyecto
+### Predicciones inexactas
+- Capturar más muestras por clase (20-30 recomendado)
+- Asegurar buena iluminación durante captura
+- Capturar objetos desde diferentes ángulos
+- Mantener condiciones similares entre entrenamiento y predicción
 
-### 🔭 PHASE 1 — Percepción Real en Vivo
-**Objetivo:** Que el sistema vea algo real  
-**Release:** v0.1 Percepción Básica  
-**Entregables:**
-- Captura en vivo desde webcam/ESP32-CAM
-- YOLOv8/MobileNet integrado
-- Bounding boxes en tiempo real
-- Grabación automática de detecciones
+### Error al importar módulos
+- Verificar instalación de dependencias: `pip install -r requirements.txt`
+- Usar entorno virtual para evitar conflictos
 
-### 🧠 PHASE 2 — Memoria Visual
-**Release:** v0.2 Memoria Sensible  
-**Entregables:**
-- Base de datos local (JSON/SQLite)
-- Embeddings vectoriales con CLIP
-- Visualizador de memoria
-- Metadata completo por objeto
+## 🤝 Contribuciones
 
-### 🎯 PHASE 3 — Re-identificación
-**Release:** v0.3 Re-identificación  
-**Entregables:**
-- Búsqueda semántica en embeddings
-- Sistema ReID (mismo objeto, diferente pose)
-- Aprendizaje de objetos personalizados
+Las contribuciones son bienvenidas. Por favor:
 
-### 🎓 PHASE 4 — Aprendizaje Activo
-**Release:** v0.4 Active Learner  
-**Entregables:**
-- Interacción humano-IA
-- Dataset incremental
-- El sistema pregunta cuando duda
-
-### 🗺️ PHASE 5 — Mapa Semántico
-**Release:** v0.5 Mapa del Mundo  
-**Entregables:**
-- SLAM 2D/3D simplificado
-- Memoria espacial de objetos
-- UI 3D del entorno
-
-### 💭 PHASE 6 — Razonamiento Visual
-**Release:** v0.6 Visual Reasoner  
-**Entregables:**
-- Integración con LLMs (GPT/Llama/Gemini)
-- Preguntas sobre escenas en vivo
-- Resúmenes automáticos del día
-
-### 🏭 PHASE 7 — Ecosistema Maker/Industrial
-**Release:** v1.0 Industrial Vision  
-**Entregables:**
-- Integración con ROS2
-- Deploy en Jetson Nano, RPi5, ESP32-S3
-- API REST/WebSocket
-- Sistema de alertas
-
-### 🎓 PHASE 8 — Escuela del Mundo
-**Release:** v1.5 Learning Platform  
-**Entregables:**
-- Laboratorio visual interactivo
-- Cursos de visión computacional
-- Certificación maker
-
-### 🌌 PHASE 9 — AGI Sensorial
-**Release:** v2.0 Experiencia Sensorial  
-**Entregables:**
-- Diario fenomenológico
-- Sensor fusion (audio, IMU, GPS)
-- Memoria episódica del mundo físico
-
----
-
-## 🤝 Contribuir
-
-¡Recogning es un proyecto colaborativo! Nos encantaría tu ayuda.
-
-### Cómo Contribuir
-
-1. 🍴 Fork el proyecto
-2. 🌿 Crea tu rama de feature (`git checkout -b feature/AmazingFeature`)
-3. ✅ Commit tus cambios (`git commit -m 'Add: amazing feature'`)
-4. 📤 Push a la rama (`git push origin feature/AmazingFeature`)
-5. 🎯 Abre un Pull Request
-
-Lee nuestra [Guía de Contribución](CONTRIBUTING.md) para más detalles.
-
-### Áreas de Contribución
-
-- 🐍 **Backend:** Python, PyTorch, OpenCV
-- 🎨 **Frontend:** Visualizadores, UI
-- 🤖 **Hardware:** ESP32-CAM, Jetson Nano, RPi
-- 📚 **Documentación:** Tutoriales, ejemplos
-- 🧪 **Testing:** Unit tests, integration tests
-- 🎓 **Educación:** Cursos, laboratorios
-
----
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/NuevaCaracteristica`)
+3. Commit tus cambios (`git commit -m 'Agregar nueva característica'`)
+4. Push a la rama (`git push origin feature/NuevaCaracteristica`)
+5. Abre un Pull Request
 
 ## 📄 Licencia
 
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para detalles.
+Este proyecto es de código abierto y está disponible bajo la licencia MIT.
+
+## 👤 Autor
+
+**Blackmvmba88**
+
+## 🙏 Agradecimientos
+
+- Comunidad de OpenCV por las herramientas de visión por computadora
+- scikit-learn por la implementación de KNN
+- Comunidad de Python por el ecosistema de librerías
+
+---
+
+⭐ Si este proyecto te resultó útil, considera darle una estrella en GitHub!
+
+---
+---
+
+## English
+
+**Live visual intelligence.** A system that learns to recognize the world through the camera, labeling and remembering objects like a digital quantum learner.
+
+## 📋 Description
+
+Basic object recognition system in Python that allows capturing, training, and classifying images from the webcam using the **K-Nearest Neighbors (KNN)** algorithm. The goal is to manually teach the model new objects and obtain real-time recognition.
+
+### 🎯 Two Available Versions
+
+1. **`reconocimiento_simple.py`** - Simplified version with interactive menu
+   - Ideal for beginners
+   - Easy-to-use menu interface
+   - Step-by-step guided workflow
+
+2. **`object_recognition.py`** - Advanced version with complete class
+   - For advanced users
+   - Complete programmatic API
+   - Interactive keyboard controls
+
+### 🎁 Demo Model (Don't start from scratch!)
+
+Want to try the system without capturing your own images? **Use the pre-trained model:**
+
+```bash
+# Create demo model with basic objects
+python crear_modelo_demo.py
+
+# Use the demo model
+python ejemplo_modelo_demo.py
+```
+
+The `crear_modelo_demo.py` script generates:
+- 📁 **dataset_demo/** - 5 synthetic objects (circle, square, triangle, star, line)
+- 🤖 **modelo_demo.pkl** - Pre-trained KNN model with 125 samples
+- 📄 **ejemplo_modelo_demo.py** - Ready-to-run script
+
+Perfect for learning and testing the system immediately!
+
+### Main Features
+
+- ✅ **Image capture** from webcam in real-time
+- ✅ **Manual training** of new object classes
+- ✅ **Real-time classification** using KNN
+- ✅ **Local dataset** with organized storage by classes
+- ✅ **Trained model persistence**
+- ✅ **Interactive interface** with keyboard controls
+- ✅ **Automatic image preprocessing**
+
+## 🛠️ Technologies
+
+- **OpenCV**: Video/image capture and processing
+- **NumPy**: Numerical operations and array manipulation
+- **scikit-learn**: KNN classifier implementation
+- **Python 3.x**: Base project language
+
+## 📦 Installation
+
+### Prerequisites
+
+- Python 3.7 or higher
+- Functional webcam
+- pip (Python package manager)
+
+### Installation Steps
+
+1. **Clone the repository:**
+```bash
+git clone https://github.com/Blackmvmba88/Recogning.git
+cd Recogning
+```
+
+2. **Install dependencies:**
+```bash
+pip install -r requirements.txt
+```
+
+## 🚀 Usage
+
+### Option 1: Simple Version (Recommended for beginners)
+
+```bash
+python reconocimiento_simple.py
+```
+
+**Interactive menu:**
+1. Teach new object (captures 30 examples automatically)
+2. Train model
+3. Recognize in real-time
+4. View learned objects
+5. Exit
+
+### Option 2: Advanced Version
+
+```bash
+python object_recognition.py
+```
+
+**Keyboard Controls:**
+
+| Key | Function |
+|-----|----------|
+| `c` | Activate **capture mode** - capture training samples |
+| `SPACE` | **Capture sample** from current class (in capture mode) |
+| `t` | **Train model** with captured samples |
+| `p` | Activate **prediction mode** - recognize objects in real-time |
+| `l` | **Load model** previously saved |
+| `q` | **Exit** program |
+
+### Typical Workflow (Simple Version)
 
 ```
-MIT License - Libre para usar, modificar y distribuir
+1. Run: python reconocimiento_simple.py
+2. Select option 1, enter object name (e.g., "cup")
+3. Position object in front of camera, 30 samples captured automatically
+4. Repeat for different objects
+5. Select option 2 to train model
+6. Select option 3 to see real-time recognition
 ```
 
+### Typical Workflow (Advanced Version)
+
+```
+1. Run: python object_recognition.py
+2. Press 'c', enter class name (e.g., "cup")
+3. Press SPACE 10-20 times to capture samples
+4. Repeat for different objects
+5. Press 't' to train model
+6. Press 'p' to see real-time recognition
+```
+
+## 📁 Project Structure
+
+```
+Recogning/
+├── reconocimiento_simple.py # Simple version with menu
+├── object_recognition.py    # Advanced version with class
+├── requirements.txt         # Project dependencies
+├── README.md               # Documentation (Spanish/English)
+├── QUICKSTART.md           # Quick start guide (Spanish)
+├── example_usage.py        # Code examples
+├── test_system.py          # Test suite
+├── dataset/                # Images directory (auto-created)
+│   ├── class1/
+│   └── class2/
+├── dataset_mamba/          # Images for simple version (auto-created)
+│   ├── object1/
+│   └── object2/
+└── model.pkl              # Trained KNN model (created when training)
+```
+
+## 🔬 How It Works
+
+### 1. Capture and Preprocessing
+
+- Images captured from webcam
+- Resized to 64x64 pixels
+- Converted to grayscale
+- Normalized (values 0-1)
+- Flattened into one-dimensional vector
+
+### 2. Storage
+
+- Each class saved in its own subdirectory
+- Images saved in JPG format
+- Automatic sample counting
+
+### 3. Training
+
+- System loads all images from dataset
+- Preprocesses each image following same pipeline
+- Trains KNN classifier
+- Saves trained model
+
+### 4. Prediction
+
+- Captures frames in real-time
+- Preprocesses each frame
+- Classifies using KNN model
+- Calculates confidence based on neighbor distances
+- Displays result on screen
+
+## 💡 Use Cases
+
+- 🎓 **Education**: Base for learning visual AI and machine learning
+- 🤖 **Smart assistants**: Everyday object recognition
+- 🔍 **Custom classification**: Train specific categories
+- 🧪 **Rapid prototyping**: Validate computer vision ideas
+- 📚 **Academic projects**: Practical KNN implementation
+
+## ⚙️ Advanced Configuration
+
+The system can be customized by editing the `ObjectRecognitionSystem` class:
+
+```python
+# Change image size for processing
+self.img_size = (64, 64)  # Increase for more detail
+
+# Modify number of neighbors in KNN
+n_neighbors = 5  # In train_model() method
+```
+
+## 🐛 Troubleshooting
+
+### Webcam doesn't start
+- Verify webcam is connected and functional
+- Check camera access permissions
+- Test with another camera application
+
+### Inaccurate predictions
+- Capture more samples per class (20-30 recommended)
+- Ensure good lighting during capture
+- Capture objects from different angles
+- Maintain similar conditions between training and prediction
+
+### Module import error
+- Verify dependency installation: `pip install -r requirements.txt`
+- Use virtual environment to avoid conflicts
+
+## 🤝 Contributions
+
+Contributions are welcome. Please:
+
+1. Fork the project
+2. Create a branch for your feature (`git checkout -b feature/NewFeature`)
+3. Commit your changes (`git commit -m 'Add new feature'`)
+4. Push to the branch (`git push origin feature/NewFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is open source and available under the MIT license.
+
+## 👤 Author
+
+**Blackmvmba88**
+
+## 🙏 Acknowledgments
+
+- OpenCV community for computer vision tools
+- scikit-learn for KNN implementation
+- Python community for the library ecosystem
+
 ---
 
-## 🌟 Créditos
-
-**Creado por:** [BlackMamba](https://github.com/Blackmvmba88)
-
-**Inspiración:** La visión de crear un estándar latinoamericano de percepción visual viva, útil para makers, robótica, educación, industria, domótica y filosofía digital.
-
----
-
-## 📞 Contacto y Comunidad
-
-- 🐛 **Issues:** [GitHub Issues](https://github.com/Blackmvmba88/Recogning/issues)
-- 💬 **Discusiones:** [GitHub Discussions](https://github.com/Blackmvmba88/Recogning/discussions)
-- 📖 **Wiki:** [Documentación](https://github.com/Blackmvmba88/Recogning/wiki)
-
----
-
-<div align="center">
-
-### 🌱 Un Proyecto Vivo
-
-**Recogning no es solo un repositorio.**  
-**Es la semilla de un universo sensorial digital.**
-
-Cada release es como criar un animalito que aprende a ver el mundo.
-
-**¿Te unes a criar este ser digital?**
-
----
-
-⭐ **Si te gusta el proyecto, dale una estrella!** ⭐
-
-[![Star History](https://img.shields.io/github/stars/Blackmvmba88/Recogning?style=social)](https://github.com/Blackmvmba88/Recogning/stargazers)
-
-</div>
+⭐ If you found this project useful, consider giving it a star on GitHub!

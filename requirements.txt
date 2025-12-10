@@ -1,33 +1,3 @@
-# Recogning - Requirements
-# Dependencias principales del proyecto
-
-# PHASE 0 - Fundación
-# No requiere dependencias adicionales aún
-
-# PHASE 1+ - Dependencias futuras (comentadas hasta implementación)
-# opencv-python>=4.8.0
-# numpy>=1.24.0
-# torch>=2.0.0
-# torchvision>=0.15.0
-# ultralytics>=8.0.0  # YOLOv8
-# Pillow>=10.0.0
-
-# PHASE 2+ - Memoria y Embeddings
-# clip @ git+https://github.com/openai/CLIP.git
-# open-clip-torch>=2.20.0
-# transformers>=4.30.0
-# faiss-cpu>=1.7.4  # Para búsqueda vectorial
-# sqlalchemy>=2.0.0
-
-# PHASE 3+ - Features Avanzadas
-# scikit-learn>=1.3.0
-# scipy>=1.11.0
-
-# Utilidades
-# python-dotenv>=1.0.0
-# pyyaml>=6.0
-# tqdm>=4.65.0
-# requests>=2.31.0
-
-# Nota: Instalar dependencias cuando sean necesarias en cada PHASE
-# pip install -r requirements.txt
+opencv-python>=4.8.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
